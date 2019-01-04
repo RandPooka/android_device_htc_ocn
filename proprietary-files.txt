@@ -1341,6 +1341,5 @@ vendor/firmware/Data.msc
 vendor/firmware/modemuw.jsn
 
 # Widevine
-vendor/lib/mediadrm/libdrmclearkeyplugin.so
 vendor/lib/mediadrm/libwvdrmengine.so
 vendor/lib/liboemcrypto.so
