@@ -118,9 +118,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.ims.disableIMSLogs=1 \
     persist.ims.disableQXDMLogs=1
 
-# LineageOTA
-PRODUCT_PROPERTY_OVERRIDES += \
-    lineage.updater.uri=http://lineageota.ddns.net/api/v1/{device}/{type}/{incr}
+## LineageOTA
+##PRODUCT_PROPERTY_OVERRIDES += \
+##    lineage.updater.uri=http://lineageota.ddns.net/api/v1/{device}/{type}/{incr}
 
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \

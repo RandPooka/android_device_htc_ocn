@@ -52,7 +52,8 @@ BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_RAMDISK_OFFSET     := 0x01000000
 TARGET_COMPILE_WITH_MSM_KERNEL := true
 TARGET_KERNEL_SOURCE := kernel/htc/msm8998
-TARGET_KERNEL_CONFIG := lineage_ocean_defconfig
+TARGET_KERNEL_CONFIG := aosip_ocean_defconfig
+### TARGET_KERNEL_CONFIG := lineage_ocean_defconfig
 
 BOARD_ROOT_EXTRA_FOLDERS := bt_firmware dsp firmware persist
 
@@ -203,7 +204,7 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.recovery
 TARGET_PROVIDES_LIBLIGHT := true
 
 # Lineage Hardware
-JAVA_SOURCE_OVERLAYS := org.lineageos.hardware|$(DEVICE_PATH)/lineagehw|**/*.java
+ JAVA_SOURCE_OVERLAYS := org.lineageos.hardware|$(DEVICE_PATH)/lineagehw|**/*.java
 
 # Media
 TARGET_USES_MEDIA_EXTENSIONS := true
