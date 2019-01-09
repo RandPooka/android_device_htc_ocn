@@ -249,3 +249,25 @@ WIFI_DRIVER_OPERSTATE_PATH := "/sys/class/net/wlan0/operstate"
 
 # inherit from the proprietary version
 -include vendor/htc/ocn/BoardConfigVendor.mk
+
+### TWRP Specific foo
+
+#TW_THEME := portrait_hdpi -- There are currently 5 settings which are: portrait_hdpi, portrait_mdpi, landscape_hdpi, landscape_mdpi, and watch_mdpi
+# RECOVERY_SDCARD_ON_DATA := true -- this enables proper handling of /data/media on devices that have this folder for storage (most Honeycomb and devices that originally shipped with ICS like Galaxy Nexus) This flag is not required for these types of devices though. If you do not define this flag and also do not include any references to /sdcard, /internal_sd, /internal_sdcard, or /emmc in your fstab, then we will automatically assume that the device is using emulated storage.
+# BOARD_HAS_NO_REAL_SDCARD := true -- disables things like sdcard partitioning and may save you some space if TWRP isn't fitting in your recovery patition
+# TW_NO_BATT_PERCENT := true -- disables the display of the battery percentage for devices that don't support it properly
+# TW_CUSTOM_POWER_BUTTON := 107 -- custom maps the power button for the lockscreen
+# TW_NO_REBOOT_BOOTLOADER := true -- removes the reboot bootloader button from the reboot menu
+# TW_NO_REBOOT_RECOVERY := true -- removes the reboot recovery button from the reboot menu
+# RECOVERY_TOUCHSCREEN_SWAP_XY := true -- swaps the mapping of touches between the X and Y axis
+# RECOVERY_TOUCHSCREEN_FLIP_Y := true -- flips y axis touchscreen values
+# RECOVERY_TOUCHSCREEN_FLIP_X := true -- flips x axis touchscreen values
+
+# TWRP_EVENT_LOGGING := true -- enables touch event logging to help debug touchscreen issues (don't leave this on for a release - it will fill up your logfile very quickly)
+# BOARD_HAS_FLIPPED_SCREEN := true -- flips the screen upside down for screens that were mounted upside-down
+# PRODUCT_COPY_FILES += device/htc/ocn/twrp.fstab:recovery/root/etc/twrp.fstab
+
+RECOVERY_VARIANT := twrp
+TW_THEME := portrait_hdpi
+RECOVERY_SDCARD_ON_DATA := true
+# PRODUCT_COPY_FILES += device/htc/ocn/twrp.fstab:recovery/root/etc/twrp.fstab
